@@ -14,9 +14,9 @@ const Register = () => {
         />
         <input
           required
-          type="password"
-          placeholder="password"
-          name="password"
+          type="email"
+          placeholder="email"
+          name="email"
           // onChange={handleChange}
         />
         <input
