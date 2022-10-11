@@ -1,10 +1,5 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
-import moment from "moment";
-import Menu from "../components/Menu";
-import Logo from "../Images/logo.jpg";
-
-const post = [
+import React from "react";
+const posts = [
   {
     id: 1,
     title: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
@@ -31,30 +26,19 @@ const post = [
   },
 ];
 
-const Single = () => {
+const Menu = () => {
   return (
-    <div className="single">
-      <div className="content">
-        <img src={Logo} alt="" />
-        <div className="user">
-          {post.userImg && <img src={post.userImg} alt="" />}
-          <div className="info">
-            <span>{post.username}</span>
-            <p>Posted {moment(post.date).fromNow()}</p>
-          </div>
-          {/* {currentUser.username === post.username && (
-            <div className="edit">
-              <Link to={`/write?edit=2`} state={post}>
-                <img src={Edit} alt="" />
-              </Link>
-              <img onClick={handleDelete} src={Delete} alt="" />
-            </div>
-          )} */}
+    <div className="menu">
+      <h1>Other posts you may like</h1>
+      {posts.map((post) => (
+        <div className="post" key={post.id}>
+          <img src={post.img} alt="" />
+          <h2>{post.title}</h2>
+          <button>Read More</button>
         </div>
-      </div>
-      <Menu />
+      ))}
     </div>
   );
 };
 
-export default Single;
+export default Menu;
