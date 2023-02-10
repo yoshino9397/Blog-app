@@ -81,6 +81,7 @@
 }
 .app .container .navbar .container .links span {
   cursor: pointer;
+  color: #7b7b7b;
 }
 .app .container .navbar .container .links .write {
   background-color: #b9e7e7;
@@ -157,7 +158,6 @@
   font-size: 18px;
 }
 .app .container .home .posts .post .content button {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   padding: 10px 20px;
@@ -247,7 +247,6 @@
   color: #555;
 }
 .app .container .single .menu .post button {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   padding: 7.5px 15px;
